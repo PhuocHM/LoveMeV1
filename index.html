@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Te  Amo</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+</style>
+<div id="click" class="view">
+     
+<button class="bubbly-button" @click="clickMe" style="margin-bottom: 100px">Click me!</button>
+  <div class="heart heart-view"  v-if="show">
+    <h3>I</h3>
+    <label class="heart-switch">
+  <input type="checkbox" :checked="heart" @click="[show =!show, image = !image]">
+    <svg viewBox="0 0 33 23" fill="white" v-if="show">
+        <path d="M23.5,0.5 C28.4705627,0.5 32.5,4.52943725 32.5,9.5 C32.5,16.9484448 21.46672,22.5 16.5,22.5 C11.53328,22.5 0.5,16.9484448 0.5,9.5 C0.5,4.52952206 4.52943725,0.5 9.5,0.5 C12.3277083,0.5 14.8508336,1.80407476 16.5007741,3.84362242 C18.1491664,1.80407476 20.6722917,0.5 23.5,0.5 Z"></path>
+    </svg>
+    
+</label>
+<h3>You</h3>
+  </div>
+  
+ <div v-if="image" style="margin-top: -150px;">
+  <img :src="source" class="image">
+  </div>
+  
+</div>
+
+<!-- <div>
+    <img src="https://image.flaticon.com/icons/svg/677/677778.svg">
+  </div>
+ -->
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
